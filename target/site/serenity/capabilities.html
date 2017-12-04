@@ -34,7 +34,7 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 0],
+                ['Passing', 0.333333],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
@@ -68,8 +68,8 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0% requirements tested successfully'},
-                {label: '100% requirements untested'},
+                {label: '33.3% requirements tested successfully'},
+                {label: '66.7% requirements untested'},
                 {label: '0%} requirements failing'},
                 {label: '0%} requirements with errors'},
                 {label: '0%} requirements with compromised tests'}
@@ -129,7 +129,7 @@
     <div id="topbanner">
         <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
         <div id="projectname-banner" style="float:right">
-            <span class="projectname">*****Facebook Automation Project*****</span>
+            <span class="projectname">*****Sample Automation Project*****</span>
         </div>
     </div>
 </div>
@@ -158,13 +158,13 @@
             <a href="#"><i class="fa fa-book"></i> Requirements</a>
         </li>
         <li >
-            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
-        </li>
-        <li >
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
+        <li >
+            <a href="0272dadd83d6e6ac748d9a947522ca78b8873f5156f9bd38d6a0eb735ee5993b.html"><i class="fa fa-comments-o"></i> Epics</a>
+        </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-12-2017 21:03</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 04-12-2017 17:10</span>
     <br style="clear:left"/>
 </div>
 
@@ -195,27 +195,27 @@
                                 </head>
                                 <body>
                                     <tr>
-                                        <td class="summary-leading-column">Capabilities</td>
+                                        <td class="summary-leading-column">Epics</td>
                                         <td>2</td>
+                                        <td>1</td>
                                         <td>0</td>
+                                        <td>1</td>
                                         <td>0</td>
-                                        <td>2</td>
-                                        <td>0</td>
-                                        <td>4</td>
+                                        <td>1</td>
                                     </tr>
                                     <tr>
                                         <td class="summary-leading-column">Features</td>
-                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>1</td>
                                         <td>0</td>
                                         <td>0</td>
-                                        <td>2</td>
                                         <td>0</td>
-                                        <td>2</td>
+                                        <td>0</td>
                                     </tr>
                                 <tr>
                                     <td class="summary-leading-column">Acceptance Criteria (tests)</td>
-                                    <td>0</td>
-                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>2</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td>0</td>
@@ -245,8 +245,8 @@
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>0</td>
-            <td>0 (0%)</td>
+            <td>2</td>
+            <td>2 (100%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
@@ -261,15 +261,15 @@
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>0</td>
-            <td>0 (0%)</td>
+            <td>2</td>
+            <td>2 (100%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">0 seconds</td>
+                <td colspan="5">24 seconds</td>
         </tr>
         </body>
     </table>
@@ -281,7 +281,7 @@
                 <div id="tabs">
                         <ul>
                                 <li><a href="#tabs-1">
-                                Capabilities (2)
+                                Epics (2)
                                 </a></li>
                         </ul>
                         <div id="tabs-1" class="capabilities-table">
@@ -293,7 +293,7 @@
             <tr>
                 <th width="30" class="test-results-heading">&nbsp;</th>
                 <th width="65" class="test-results-heading">ID</th>
-                <th width="525" class="test-results-heading">Capability</th>
+                <th width="525" class="test-results-heading">Epic</th>
                     <th width="65" class="test-results-heading">Features</th>
                 <th class="test-results-heading" width="75px">Auto.<br/>Tests</th>
                 <th class="test-results-heading" width="25px"><i class="fa fa-check-square-o"
@@ -345,11 +345,11 @@
                         <div class="requirementNarrative read-more-text">In order to understand a word that I don't know<br>As a user<br>I want to be able to look up the meaning of the word</div>
                     </td>
 
-                        <td class="bluetext requirementRowCell">2</td>
+                        <td class="bluetext requirementRowCell">1</td>
 
 
-                    <td class="greentext highlighted-value requirementRowCell">0</td>
-                    <td class="greentext requirementRowCell">0</td>
+                    <td class="greentext highlighted-value requirementRowCell">2</td>
+                    <td class="greentext requirementRowCell">2</td>
                     <td class="bluetext requirementRowCell">0</td>
                     <td class="redtext requirementRowCell">0</td>
                     <td class="lightorangetext requirementRowCell">0</td>
@@ -365,13 +365,13 @@
                         <table>
                             <tr>
                                 <td width="40px">
-                                    <div class="small">0%</div>
+                                    <div class="small">100%</div>
                                 </td>
                                 <td width="125px">
                                     <div class="percentagebar"
                                          title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -380,19 +380,19 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%"
                                          style="width: 125px;">
                                         <div class="ignoredbar"
-                                             style="width: 0px;"
+                                             style="width: 125px;"
                                              title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -401,18 +401,18 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%">
                                             <div class="compromisedbar"
-                                                 style="width: 0px;"
+                                                 style="width: 125px;"
                                                  title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -421,18 +421,18 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%">
                                                 <div class="errorbar"
-                                                     style="width: 0px;"
+                                                     style="width: 125px;"
                                                      title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -441,18 +441,18 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%">
                                                     <div class="failingbar"
-                                                         style="width: 0px;"
+                                                         style="width: 125px;"
                                                          title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -461,18 +461,18 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%">
                                                         <div class="passingbar"
-                                                             style="width: 0px;"
+                                                             style="width: 125px;"
                                                              title="Search for definitions
-Tests implemented: 0
-  - Passing tests: 0 (0% of specified requirements)
+Tests implemented: 2
+  - Passing tests: 2 (100% of specified requirements)
   - Failing tests: 0 (0% of specified requirements)
   - Tests with errors: 0 (0% of specified requirements)
   - Compromised tests 0 (0% of specified requirements)
@@ -481,11 +481,11 @@ Tests not implemented or not executed: 0
   - Pending tests: 0 (0% of specified requirements)
   - Ignored or skipped tests: 0 (0% of specified requirements)
 
-Requirements specified:     3
-Requirements with no tests: 3
+Requirements specified:     2
+Requirements with no tests: 0
 
 
-Estimated unimplemented tests: 12
+Estimated unimplemented tests: 0
 Estimated unimplemented or pending requirements: 0%
 Estimated ignored or skipped requirements: 0%">
                                                         </div>
@@ -679,6 +679,65 @@ Estimated ignored or skipped requirements: 0%">
 
                             </div>
                         </div>
+<table>
+    <tr>
+        <td>
+            <div><h3>Acceptance Criteria</h3></div>
+            <div id="test_list_tests" class="table">
+                <div class="test-results">
+                    <table id="test-results-table">
+                        <thead>
+                        <tr>
+                            <th width="50" class="test-results-heading">&nbsp;</th>
+                            <th width="%" class="test-results-heading">Tests</th>
+                            <th width="70" class="test-results-heading">Steps</th>
+
+                            <th width="100" class="test-results-heading">Duration<br>(seconds)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+                                    <a href="3c2022e10924ebd2232831780d54e2c1c20eb3afb7566436f6be1a532cc343da.html" class="ellipsis" title="">
+                                    Looking up the definition of 'apple' 
+                                    </a></div>
+                                </td>
+
+                                <td class="lightgreentext">8</td>
+
+
+                                <td class="lightgreentext">22.61</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+                                    <a href="bcd55a568f2bef0176297d8382f074165e27cbfdf42eeb5198e9a043ec78f615.html" class="ellipsis" title="">
+                                    Looking up the definition of 'pear' 
+                                    </a></div>
+                                </td>
+
+                                <td class="lightgreentext">8</td>
+
+
+                                <td class="lightgreentext">1.37</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
                 </div>
             </div>
         </div>

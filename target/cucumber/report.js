@@ -39,7 +39,7 @@ formatter.match({
   "location": "DefinitionSteps.givenTheUserIsOnTheWikionaryHomePage()"
 });
 formatter.result({
-  "duration": 4875657102,
+  "duration": 12512503512,
   "status": "passed"
 });
 formatter.match({
@@ -52,7 +52,7 @@ formatter.match({
   "location": "DefinitionSteps.whenTheUserLooksUpTheDefinitionOf(String)"
 });
 formatter.result({
-  "duration": 1315800407,
+  "duration": 9217463848,
   "status": "passed"
 });
 formatter.match({
@@ -65,7 +65,7 @@ formatter.match({
   "location": "DefinitionSteps.thenTheyShouldSeeADefinitionContainingTheWords(String)"
 });
 formatter.result({
-  "duration": 1200516816,
+  "duration": 726918549,
   "status": "passed"
 });
 formatter.scenario({
@@ -95,7 +95,7 @@ formatter.match({
   "location": "DefinitionSteps.givenTheUserIsOnTheWikionaryHomePage()"
 });
 formatter.result({
-  "duration": 405223128,
+  "duration": 338468650,
   "status": "passed"
 });
 formatter.match({
@@ -108,7 +108,7 @@ formatter.match({
   "location": "DefinitionSteps.whenTheUserLooksUpTheDefinitionOf(String)"
 });
 formatter.result({
-  "duration": 4324433666,
+  "duration": 713525749,
   "status": "passed"
 });
 formatter.match({
@@ -121,7 +121,7 @@ formatter.match({
   "location": "DefinitionSteps.thenTheyShouldSeeADefinitionContainingTheWords(String)"
 });
 formatter.result({
-  "duration": 703502655,
+  "duration": 306697612,
   "status": "passed"
 });
 });

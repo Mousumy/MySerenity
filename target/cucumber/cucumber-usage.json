@@ -5,12 +5,12 @@
       {
         "name": "the user looks up the definition of the word \u0027apple\u0027",
         "aggregatedDurations": {
-          "average": 1.315800407,
-          "median": 1.315800407
+          "average": 9.217463848,
+          "median": 9.217463848
         },
         "durations": [
           {
-            "duration": 1.315800407,
+            "duration": 9.217463848,
             "location": "consult_dictionary/DefinitionApple.feature:9"
           }
         ]
@@ -18,12 +18,12 @@
       {
         "name": "the user looks up the definition of the word \u0027pear\u0027",
         "aggregatedDurations": {
-          "average": 4.324433666,
-          "median": 4.324433666
+          "average": 0.713525749,
+          "median": 0.713525749
         },
         "durations": [
           {
-            "duration": 4.324433666,
+            "duration": 0.713525749,
             "location": "consult_dictionary/DefinitionApple.feature:14"
           }
         ]
@@ -36,16 +36,16 @@
       {
         "name": "the user is on the Wikionary home page",
         "aggregatedDurations": {
-          "average": 2.640440115,
-          "median": 2.640440115
+          "average": 6.425486081,
+          "median": 6.425486081
         },
         "durations": [
           {
-            "duration": 4.875657102,
+            "duration": 12.512503512,
             "location": "consult_dictionary/DefinitionApple.feature:8"
           },
           {
-            "duration": 0.405223128,
+            "duration": 0.33846865,
             "location": "consult_dictionary/DefinitionApple.feature:13"
           }
         ]
@@ -58,12 +58,12 @@
       {
         "name": "they should see the definition \u0027A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.\u0027",
         "aggregatedDurations": {
-          "average": 1.200516816,
-          "median": 1.200516816
+          "average": 0.726918549,
+          "median": 0.726918549
         },
         "durations": [
           {
-            "duration": 1.200516816,
+            "duration": 0.726918549,
             "location": "consult_dictionary/DefinitionApple.feature:10"
           }
         ]
@@ -71,12 +71,12 @@
       {
         "name": "they should see the definition \u0027An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.\u0027",
         "aggregatedDurations": {
-          "average": 0.703502655,
-          "median": 0.703502655
+          "average": 0.306697612,
+          "median": 0.306697612
         },
         "durations": [
           {
-            "duration": 0.703502655,
+            "duration": 0.306697612,
             "location": "consult_dictionary/DefinitionApple.feature:15"
           }
         ]

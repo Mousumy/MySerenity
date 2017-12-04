@@ -13,12 +13,21 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <serenity.version>1.1.36</serenity.version> <!-- https://bintray.com/serenity/maven/serenity-core/ -->
+        <java.version>1.8</java.version>
+        <surefire.version>2.19.1</surefire.version>
+        <failsafe.version>2.19.1</failsafe.version>
+        <compiler.version>3.5.1</compiler.version>
+        <enforcer.version>1.4.1</enforcer.version>
+        <junit.version>4.12</junit.version>
+        <!--
+        <assertj.version>3.5.1</assertj.version>
+        -->
+        <slf4j.version>1.7.21</slf4j.version>
+        <serenity.version>1.1.36</serenity.version>
         <serenity.maven.version>1.1.36</serenity.maven.version>
-        <serenity.cucumber.version>1.1.8</serenity.cucumber.version> <!--  https://bintray.com/serenity/maven/serenity-cucumber/ -->
+        <serenity.cucumber.version>1.1.8</serenity.cucumber.version>
     </properties>
-
-    <!-- Define the Bintray repos for convenience -->
+ 
     <repositories>
         <repository>
             <id>serenity</id>
@@ -26,6 +35,7 @@
             <url>http://dl.bintray.com/serenity/maven</url>
         </repository>
     </repositories>
+ 
     <pluginRepositories>
         <pluginRepository>
             <id>serenity</id>
@@ -33,34 +43,42 @@
             <url>http://dl.bintray.com/serenity/maven</url>
         </pluginRepository>
     </pluginRepositories>
-
+ 
     <dependencies>
+    <!-- This will need to turn on for Gradle execution
+		<dependency>
+    		<groupId>net.serenity-bdd</groupId>
+    		<artifactId>serenity-gradle-plugin</artifactId>
+    		<version>1.6.0</version>
+		</dependency>
+	-->  
+		
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!--
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>{assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+        -->
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
             <version>${serenity.version}</version>
         </dependency>
-        
-        <!-- This below jar doesn't working. Need to check/verify
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0</version>
-        </dependency>
-        -->
-        
-  		<dependency>
-    		<groupId>org.apache.logging.log4j</groupId>
-    		<artifactId>log4j-api</artifactId>
-    		<version>2.10.0</version>
-  		</dependency>
-  		
-  		<dependency>
-    		<groupId>org.apache.logging.log4j</groupId>
-    		<artifactId>log4j-core</artifactId>
-    		<version>2.10.0</version>
-  		</dependency>
-        
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
@@ -68,60 +86,26 @@
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-rest-assured</artifactId>
-            <version>${serenity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
             <version>${serenity.cucumber.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>1.8.6</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.lambdaj</groupId>
-            <artifactId>lambdaj</artifactId>
-            <version>2.3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>1.7.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-jira-plugin</artifactId>
-    <version>1.1.1</version>
-</dependency>
     </dependencies>
+ 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4</version>
+                <version>${enforcer.version}</version>
                 <executions>
                     <execution>
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <requireUpperBoundDeps/>
+                                <requireUpperBoundDeps />
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
                             </rules>
                         </configuration>
                         <goals>
@@ -130,26 +114,22 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18</version>
+                <version>${surefire.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18</version>
+                <version>${failsafe.version}</version>
                 <configuration>
                     <includes>
-                        <include>**/cucumber/junit/**/*.java</include>
-                        <include>**/cucumber/*.java</include>
+                        <include>**/*.java</include>
                     </includes>
-                    <reuseForks>true</reuseForks>
-                    <!--<forkCount>2</forkCount>-->
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
                 </configuration>
                 <executions>
                     <execution>
@@ -163,10 +143,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>${compiler.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -174,24 +154,11 @@
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.maven.version}</version>
                 <dependencies>
-                
-                  <dependency>
-                    <groupId>net.serenity-bdd</groupId>
-                    <artifactId>serenity-core</artifactId>
-                    <version>${serenity.version}</version>
-                  </dependency>
-               <!-- 
-                         <dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-jira-requirements-provider</artifactId>
-    <version>1.1.1</version>
-</dependency>
-                 <dependency>
+                    <dependency>
                         <groupId>net.serenity-bdd</groupId>
-                        <artifactId>serenity-jira-plugin</artifactId>
-                        <version>1.1.1</version>
-                    </dependency>    -->
-                  
+                        <artifactId>serenity-core</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
                 </dependencies>
                 <executions>
                     <execution>
@@ -203,22 +170,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
-              <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>                  
-                <version>2.18</version>
-                <configuration>
-                    <includes>
-                        <include>**/features/**/When*.java</include>                  
-                    </includes>
-                    <systemProperties>
-                        <webdriver.driver>${webdriver.driver}</webdriver.driver> 
-                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
-                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
-                    </systemProperties>
-                </configuration>
-            </plugin>
-            
         </plugins>
     </build>
 </project>

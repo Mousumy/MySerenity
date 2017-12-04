@@ -1,8 +1,4 @@
-facebook/utils/HelperMethods.class
-facebook/pages/AppleLoginPage.class
-facebook/FacebookTestSuite.class
-facebook/steps/serenity/EndUserSteps.class
-facebook/pages/LoginPage.class
-facebook/steps/DefinitionSteps.class
-facebook/utils/Utility.class
-facebook/steps/FindFriendFromListStepDef.class
+application/steps/DefinitionSteps.class
+application/pages/AppleLoginPage.class
+application/steps/serenity/EndUserSteps.class
+application/TestSuite.class
